@@ -1,0 +1,38 @@
+<form #f="ngForm">
+<div class="row" style="margin-top:10px">
+
+    <div class="col-xs-1 col-lg-1">
+        <label>Name</label>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+        <input type="text" class="form-control" name="txtName" ngModel />
+    </div>
+</div>
+<div class="row" style="margin-top:10px">
+
+    <div class="col-xs-1 col-lg-1">
+        <label>Phone</label>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+        <input type="text" class="form-control" name="txtPhone" ngModel />
+    </div>
+</div>
+<div class="row" style="margin-top:10px">
+
+    <div class="col-xs-1 col-lg-1">
+        <label>Country</label>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+        <select class="form-control" name="ddlCountry" ngModel>
+            <option *ngFor="let item of liCountry" [value]="item.id" >{{item.name}}</option>
+        </select>
+    </div>
+</div>
+<div class="row" style="margin-top:10px">
+
+    <div class="col-lg-offset-4 col-xs-1 col-lg-1">
+        <input type="button" value="Save" class="btn btn-primary" (click)="onSave()" />
+    </div>
+
+</div>
+</form>
